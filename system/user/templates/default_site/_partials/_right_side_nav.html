@@ -1,0 +1,79 @@
+<div class="navbar-right">
+    <div class="wnav-holder widget-h-login header-dropdown-outer">
+        <a href="javascript:void(0);" class="login-toggle is-login is-btn header-element" aria-label="EXCLUSIVE"><span>EXCLUSIVE</span></a>
+    </div>
+
+    <div class="wnav-holder w-header-search header-dropdown-outer"> <a href="#" data-title="Search"
+            class="icon-holder header-element search-btn search-trigger" aria-label="search"> <span
+                class="search-icon-svg"></span> </a>
+        <div class="header-dropdown">
+            <div class="header-search-form live-search-form">
+
+                {exp:search:simple_form
+                    channel="posts"
+                    search_in="everywhere"
+                    result_page="search/results"
+                    no_result_page="search/results"
+                }
+                <div class="rb-search-form">
+                    <div class="search-form-inner"> <span class="search-icon"><span
+                                class="search-icon-svg"></span></span>
+                                <span class="search-text">
+                                    <input type="text" class="field" placeholder="Search Headlines, News..." value="" name="keywords" />
+                                </span>
+
+                                <span class="rb-search-submit">
+                                    <input type="submit" value="Search" /> <i class="rbi rbi-cright" aria-hidden="true"></i>
+                                </span>
+                    </div>
+                </div>
+                {/exp:search:simple_form}
+                
+                <span class="live-search-animation rb-loader"></span>
+                <div class="live-search-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dark-mode-toggle-wrap">
+        <div class="dark-mode-toggle"> <span class="dark-mode-slide">
+            <i class="dark-mode-slide-btn mode-icon-dark" data-title="Switch to Light">
+                    <svg class="svg-icon svg-mode-dark" aria-hidden="true" role="img"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M507.681,209.011c-1.297-6.991-7.324-12.111-14.433-12.262c-7.104-0.122-13.347,4.711-14.936,11.643
+                                c-15.26,66.497-73.643,112.94-141.978,112.94c-80.321,0-145.667-65.346-145.667-145.666c0-68.335,46.443-126.718,112.942-141.976
+                                c6.93-1.59,11.791-7.826,11.643-14.934c-0.149-7.108-5.269-13.136-12.259-14.434C287.546,1.454,271.735,0,256,0
+                                C187.62,0,123.333,26.629,74.98,74.981C26.628,123.333,0,187.62,0,256s26.628,132.667,74.98,181.019
+                                C123.333,485.371,187.62,512,256,512s132.667-26.629,181.02-74.981C485.372,388.667,512,324.38,512,256
+                                C512,240.278,510.546,224.469,507.681,209.011z" />
+                    </svg>
+            </i>
+
+        <i class="dark-mode-slide-btn mode-icon-default" data-title="Switch to Dark">
+                    <svg class="svg-icon svg-mode-light" aria-hidden="true" role="img"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.447 232.447">
+                        <path fill="currentColor" d="M116.211,194.8c-4.143,0-7.5,3.357-7.5,7.5v22.643c0,4.143,3.357,7.5,7.5,7.5s7.5-3.357,7.5-7.5V202.3
+                                    C123.711,198.157,120.354,194.8,116.211,194.8z" />
+                        <path fill="currentColor" d="M116.211,37.645c4.143,0,7.5-3.357,7.5-7.5V7.505c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v22.641
+                                    C108.711,34.288,112.068,37.645,116.211,37.645z" />
+                        <path fill="currentColor" d="M50.054,171.78l-16.016,16.008c-2.93,2.929-2.931,7.677-0.003,10.606c1.465,1.466,3.385,2.198,5.305,2.198
+                                    c1.919,0,3.838-0.731,5.302-2.195l16.016-16.008c2.93-2.929,2.931-7.677,0.003-10.606C57.731,168.852,52.982,168.851,50.054,171.78z" />
+                        <path fill="currentColor" d="M177.083,62.852c1.919,0,3.838-0.731,5.302-2.195L198.4,44.649c2.93-2.929,2.931-7.677,0.003-10.606
+c-2.93-2.932-7.679-2.931-10.607-0.003l-16.016,16.008c-2.93,2.929-2.931,7.677-0.003,10.607
+C173.243,62.12,175.163,62.852,177.083,62.852z" />
+                        <path fill="currentColor" d="M37.645,116.224c0-4.143-3.357-7.5-7.5-7.5H7.5c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5,7.5,7.5h22.645
+C34.287,123.724,37.645,120.366,37.645,116.224z" />
+                        <path fill="currentColor" d="M224.947,108.724h-22.652c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5,7.5,7.5h22.652c4.143,0,7.5-3.357,7.5-7.5
+S229.09,108.724,224.947,108.724z" />
+                        <path fill="currentColor" d="M50.052,60.655c1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.732,5.303-2.196c2.93-2.929,2.93-7.678,0.001-10.606
+L44.652,34.042c-2.93-2.93-7.679-2.929-10.606-0.001c-2.93,2.929-2.93,7.678-0.001,10.606L50.052,60.655z" />
+                        <path fill="currentColor"
+                            d="M182.395,171.782c-2.93-2.929-7.679-2.93-10.606-0.001c-2.93,2.929-2.93,7.678-0.001,10.607l16.007,16.008
+c1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.732,5.303-2.196c2.93-2.929,2.93-7.678,0.001-10.607L182.395,171.782z" />
+                        <path fill="currentColor" d="M116.22,48.7c-37.232,0-67.523,30.291-67.523,67.523s30.291,67.523,67.523,67.523s67.522-30.291,67.522-67.523
+S153.452,48.7,116.22,48.7z M116.22,168.747c-28.962,0-52.523-23.561-52.523-52.523S87.258,63.7,116.22,63.7
+c28.961,0,52.522,23.562,52.522,52.523S145.181,168.747,116.22,168.747z" /></svg></i>
+</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+
+
+<section class="elementor-section elementor-element elementor-section-boxed elementor-section-height-default">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container ptb-90 elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ab3c3fb"
+            data-id="ab3c3fb" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-671051a elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-invisible"
+                    data-id="671051a" data-element_type="section"
+                    data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+                    <div class="elementor-container elementor-column-gap-custom no-marging-rl">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b469cae"
+                            data-id="b469cae" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-1353c3b elementor-widget elementor-widget-foxiz-heading"
+                                                data-id="1353c3b" data-element_type="widget"
+                                                data-widget_type="foxiz-heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <div id="uid_1353c3b" class="block-h heading-layout-7 dark-scheme">
+                                                        <div class="heading-inner">
+                                                            <h3 class="heading-title"><span>Watch this out</span></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                <div class="elementor-element elementor-element-caa499c elementor-widget elementor-widget-foxiz-playlist"
+                                    data-id="caa499c" data-element_type="widget"
+                                    data-widget_type="foxiz-playlist.default">
+                                    <div class="elementor-widget-container">
+                                        {exp:channel:entries channel="real_videos" limit="1"}
+                                        {video_details}
+                                        <div id="uid_caa499c" class="block-wrap block-playlist light-scheme is-gap-none">
+                                            <div class="block-inner yt-playlist" data-block="uid_caa499c" data-id="{video_details:video_code}">
+                                                <div class="yt-embed">
+                                                    <div class="iframe-holder">
+                                                        <div class="yt-player"></div>
+                                                    </div>
+                                                </div>
+                                        {/video_details}
+                                        {/exp:channel:entries}
+
+                                                <div class="plist-items">
+
+                                                    <div class="plist-items-inner">
+
+                                                        <div class="play-panel">
+                                                            <div class="play-content">
+                                                                {exp:channel:entries channel="real_videos" limit="1"}
+                                                                <div class="play-index meta-text">
+                                                                    <span>Now Playing</span> <span class="index-info"><span class="video-index">{count}</span>/5</span>
+                                                                </div> 
+                                                                <span class="h4 play-title">{title}</span>
+                                                                {/exp:channel:entries}
+                                                            </div>
+                                                                
+                                                                <a class="yt-trigger" href="#">
+                                                                    <span class="yt-trigger-icons">
+                                                                        
+                                                                        <svg class="svg-icon svg-play" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191.255 191.255">
+                                                                            <path fill="currentColor" d="M162.929,66.612c-2.814-1.754-6.514-0.896-8.267,1.917s-0.895,6.513,1.917,8.266c6.544,4.081,10.45,11.121,10.45,18.833 s-3.906,14.752-10.45,18.833l-98.417,61.365c-6.943,4.329-15.359,4.542-22.512,0.573c-7.154-3.97-11.425-11.225-11.425-19.406V34.262c0-8.181,4.271-15.436,11.425-19.406c7.153-3.969,15.569-3.756,22.512,0.573l57.292,35.723c2.813,1.752,6.513,0.895,8.267-1.917c1.753-2.812,0.895-6.513-1.917-8.266L64.512,5.247c-10.696-6.669-23.661-7-34.685-0.883C18.806,10.48,12.226,21.657,12.226,34.262v122.73c0,12.605,6.58,23.782,17.602,29.898c5.25,2.913,10.939,4.364,16.616,4.364c6.241,0,12.467-1.754,18.068-5.247l98.417-61.365c10.082-6.287,16.101-17.133,16.101-29.015S173.011,72.899,162.929,66.612z" />
+                                                                        </svg>
+
+                                                                        <svg class="svg-icon svg-pause" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                            <path fill="currentColor" d="M124.5,0h-35c-44.112,0-80,35.888-80,80v352c0,44.112,35.888,80,80,80h35c44.112,0,80-35.888,80-80V80 C204.5,35.888,168.612,0,124.5,0z M164.5,432c0,22.056-17.944,40-40,40h-35c-22.056,0-40-17.944-40-40V80 c0-22.056,17.944-40,40-40h35c22.056,0,40,17.944,40,40V432z" />
+                                                                            <path fill="currentColor" d="M482.5,352c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80h-34c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h34c44.112,0,80-35.888,80-80c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20 c0,22.056-17.944,40-40,40h-34c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h34c22.056,0,40,17.944,40,40v252 C462.5,343.046,471.454,352,482.5,352z"/>
+                                                                        </svg>
+
+                                                                    </span>
+                                                                </a>
+                                                        </div>
+
+
+                                                        <div class="plist-holder scroll-holder">
+
+                                                            {exp:channel:entries channel="real_videos" limit="5"}
+                                                            {video_details}
+                                                            <a class="plist-item vid-img" href="#" data-id="{video_details:video_code}" data-index="{count}">
+                                                                <img decoding="async" class="plist-item-thumb" src="{video_details:display_image}" alt="{title}">
+                                                                <div class="plist-item-content"> <span class="h4 plist-item-title">{title}</span>
+                                                                    <span class="plist-meta is-meta">{video_details:video_category}</span>
+                                                                </div>
+                                                            </a>
+                                                            {/video_details}
+                                                            {/exp:channel:entries}
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-d4ebc19 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                    data-id="d4ebc19" data-element_type="section">
+                    <div class="elementor-container pt-20 elementor-column-gap-custom no-marging-rl">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-19394a0"
+                            data-id="19394a0" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-a0ea24e elementor-widget elementor-widget-foxiz-grid-box-1"
+                                    data-id="a0ea24e" data-element_type="widget"
+                                    data-widget_type="foxiz-grid-box-1.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_a0ea24e"
+                                            class="block-wrap block-grid block-grid-box-1 rb-columns rb-col-4 is-gap-10 light-scheme ecat-bg-2">
+                                            <div class="block-inner">
+                                                
+                                                {exp:channel:entries channel="posts" limit="4" category="50"}
+                                                {post_details}
+                                                <div class="p-wrap p-grid p-box p-grid-box-1 box-bg"
+                                                    data-pid="1563">
+                                                    <div class="grid-box">
+
+                                                        <div class="feat-holder overlay-text">
+                                                            <div class="p-featured">
+                                                                <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                    <img width="330" height="220" src="{post_details:display_image}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" />
+                                                                </a>
+                                                                <aside class="p-format-overlay format-style-center">
+                                                                    <span class="p-format format-video">
+                                                                        <i class="rbi rbi-video" aria-hidden="true"></i>
+                                                                    </span>
+                                                                </aside>
+                                                            </div>
+                                                            <div class="p-categories p-top">
+                                                                {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                        FROM exp_categories 
+                                                                        JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                        WHERE exp_categories.group_id IN ('3') 
+                                                                        AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                        ORDER BY exp_categories.cat_name ASC"
+                                                                        style="nested"}
+                                                                <a class="p-category category-id-23" href="{url_title_path=post}" rel="category">{cat_name}</a>
+                                                                {/exp:query}
+                                                            </div>
+                                                        </div>
+
+
+                                                        <h4 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h4>
+                                                        <div class="p-meta has-bookmark">
+                                                            <div class="meta-inner is-meta"> <span class="meta-el meta-read">
+                                                                
+                                                                <i class="rbi rbi-watch" aria-hidden="true"></i>{post_details:read_time} Mins Read</span>
+                                                            </div>
+                                                            <span class="rb-bookmark bookmark-trigger" data-pid="1563">
+                                                                <i data-title="Save it" class="rbi rbi-bookmark" aria-hidden="true"></i>
+                                                                <i data-title="Remove" class="bookmarked-icon rbi rbi-bookmark-fill" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/post_details}
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

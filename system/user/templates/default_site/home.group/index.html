@@ -1,0 +1,636 @@
+{layout=layout/wrapper-home-loading}
+    
+{exp:seo_lite default_title="Joy Safari Bay"}
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1b92a9b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1b92a9b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container prl-10-sm elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-601965a"
+            data-id="601965a" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <section
+                    class="elementor-section elementor-inner-section elementor-element elementor-element-bbd4d97 elementor-section-full_width elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-default elementor-section-height-default"
+                    data-id="bbd4d97" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-custom no-marging-rl">
+                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-aee414c"
+                            data-id="aee414c" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                
+                                <div class="elementor-element elementor-element-1353c3b elementor-widget elementor-widget-foxiz-heading"
+                                    data-id="1353c3b" data-element_type="widget"
+                                    data-widget_type="foxiz-heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_1353c3b" class="block-h heading-layout-7 light-scheme">
+                                            <div class="heading-inner">
+                                                <h3 class="heading-title"><span>Editor's Pick</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="elementor-element elementor-element-c67264f elementor-widget elementor-widget-foxiz-list-small-2" data-id="c67264f" data-element_type="widget" data-widget_type="foxiz-list-small-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_c67264f" class="block-wrap block-small block-list block-list-small-2 rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 light-scheme ecat-text featured-left">
+                                            <div class="block-inner">
+
+                                                {exp:channel:entries channel="posts" limit="5"}
+                                                    {if "{post_details}{post_details:category_display}{/post_details}" =="5"}
+                                                <div class="p-wrap p-small p-list-small-2" data-pid="33">
+                                                    <div class="feat-holder">
+                                                        <div class="p-featured ratio-v1">
+                                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                <img width="330" height="220" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="p-content">
+                                                        {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                        <div class="p-categories p-top"><span class="p-category category-id-3" rel="category">{cat_name}</span></div>
+                                                        {/exp:query}
+
+                                                        <h4 class="entry-title home-ent">
+                                                            <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                {/if}
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-7784804" data-id="7784804" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+
+                                {exp:channel:entries channel="posts" category="1" limit="1"}
+                                <div class="elementor-element elementor-element-0294bdd elementor-widget elementor-widget-foxiz-overlay-1"
+                                    data-id="0294bdd" data-element_type="widget"
+                                    data-widget_type="foxiz-overlay-1.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_0294bdd" class="block-wrap block-overlay overlay-1 dark-overlay-scheme p-gradient hovering-scale ecat-bg-3">
+                                            <div class="block-inner">
+                                                <div class="p-wrap p-highlight p-overlay-1" data-pid="35">
+                                                    <div class="overlay-holder">
+                                                        <div class="p-featured">
+                                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                <img width="860" height="535" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="eager"/>
+                                                            </a>
+                                                        </div>
+                                                        <div class="overlay-wrap">
+                                                            <div class="overlay-inner p-content">
+                                                                <div class="p-categories p-top">
+                                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                                    <span class="p-category category-id-2" rel="category">{cat_name}</span>
+                                                                    {/exp:query}
+                                                                </div>
+                                                                <h2 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h2>
+                                                                <p class="entry-summary">{post_details}{post_details:recap}{/post_details}<span>&hellip;</span></p>
+                                                                <div class="p-meta">
+                                                                    <div class="meta-inner is-meta">
+                                                                        <span class="meta-el meta-update">
+                                                                            <i class="rbi rbi-time"></i>
+                                                                            <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/exp:channel:entries}
+
+                                <div class="elementor-element elementor-element-c075f1b elementor-widget elementor-widget-foxiz-list-box-2"
+                                    data-id="c075f1b" data-element_type="widget"
+                                    data-widget_type="foxiz-list-box-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_c075f1b"
+                                            class="block-wrap block-big block-list block-list-box-2 hovering-scale ecat-text featured-right">
+                                            <div class="block-inner">
+                                                
+                                                {exp:channel:entries channel="posts" category="52" limit="1"}
+                                                <div class="p-wrap p-list p-box p-list-2 p-list-box-2 box-bg" data-pid="37">
+                                                    <div class="list-box">
+                                                        <div class="list-holder">
+                                                            <div class="list-feat-holder">
+                                                                <div class="feat-holder">
+                                                                    <div class="p-featured">
+                                                                        <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                            <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-content">
+                                                                <div class="p-categories p-top">
+                                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                                    <span class="p-category category-id-5" rel="category">{cat_name}</span>
+                                                                    {/exp:query}
+                                                                </div>
+                                                                <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                                                <div class="p-meta">
+                                                                    <div class="meta-inner is-meta">
+                                                                        <span class="meta-el meta-update">
+                                                                            <i class="rbi rbi-time"></i>
+                                                                            <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-e547b47 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e547b47" data-element_type="section">
+    <div class="elementor-container ptb-90 mid-container elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e27d8ac" data-id="e27d8ac" data-element_type="column">
+            
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-54af9cb elementor-widget elementor-widget-foxiz-heading" data-id="54af9cb" data-element_type="widget" data-widget_type="foxiz-heading.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_54af9cb" class="block-h heading-layout-c10">
+                            <div class="heading-inner">
+                                <h2 class="heading-title"><span>WILD PHOTOGRAPHY</span></h2>
+                                <div class="heading-tagline h6">
+                                    <span class="heading-tagline-label">Sharing the best wildlife moments captured by the best camera clickers.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-e98909b elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                    data-id="e98909b" data-element_type="widget" data-widget_type="divider.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-divider">
+                            <span class="elementor-divider-separator">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-92ac716 elementor-widget  elementor-widget-foxiz-overlay-flex" data-id="92ac716" data-element_type="widget" data-widget_type="foxiz-overlay-flex.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_92ac716"
+                            class="block-wrap block-overlay block-overlay-flex light-overlay-scheme p-gradient is-horizontal-scroll rb-columns rb-col-4 is-gap-none hovering-scale ecat-text">
+                            <div class="block-inner">
+
+                                {exp:channel:entries channel="posts" category="9" limit="4"}
+                                <div class="p-wrap p-overlay p-overlay-flex" data-pid="71">
+                                    <div class="overlay-holder">
+                                        <div class="p-featured">
+                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                <img width="860" height="572" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" />
+                                            </a>
+                                        </div>
+                                        <div class="overlay-wrap">
+                                            <div class="p-content overlay-inner overlay-text">
+                                                <div class="p-categories p-top">
+                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                    <span class="p-category category-id-2" rel="category">{cat_name}</span>
+                                                    {/exp:query}
+                                                </div>
+
+                                                <h3 class="entry-title">
+                                                    <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                </h3>
+
+                                                <div class="p-divider is-divider-bold"></div>
+
+                                                <div class="p-meta">
+                                                    <div class="meta-inner is-meta">
+                                                        <span class="meta-el meta-update"> <i class="rbi rbi-time"></i> <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/exp:channel:entries}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1f739e9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f739e9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container ptb-90 mid-container elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1054517"
+            data-id="1054517" data-element_type="column">
+
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-3e01505 elementor-widget elementor-widget-foxiz-heading" data-id="3e01505" data-element_type="widget" data-widget_type="foxiz-heading.default">
+                    <div class="elementor-widget-container">
+                    <div id="uid_3e01505" class="block-h heading-layout-c10 light-scheme"><div class="heading-inner"><h2 class="heading-title"><span>AFRICAN WILDLIFE</span></h2>
+                        <div class="heading-tagline h6"><span class="heading-tagline-label">Learn about African wildlife behaviors, habitats, and conservation efforts.</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="elementor-element elementor-element-0d8dd00 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                    data-id="0d8dd00" data-element_type="widget" data-widget_type="divider.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-divider">
+                            <span class="elementor-divider-separator">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-28eb71f elementor-widget elementor-widget-foxiz-grid-flex-2" data-id="28eb71f" data-element_type="widget" data-widget_type="foxiz-grid-flex-2.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_28eb71f"
+                            class="block-wrap block-grid block-grid-flex-2 rb-columns rb-col-4 rb-tcol-2 rb-mcol-2 is-gap-20 light-scheme col-border is-border-gray hovering-scale ecat-text">
+                            <div class="block-inner">
+
+                                {exp:channel:entries channel="posts" category="11" limit="4" orderby="random"}
+                                <div class="p-wrap p-grid p-grid-2" data-pid="25">
+                                    <div class="feat-holder">
+                                        <div class="p-featured">
+                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                <img width="615" height="410" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> </a>
+                                        </div>
+                                    </div>
+
+                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                            FROM exp_categories 
+                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                            WHERE exp_categories.group_id IN ('3') 
+                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                            ORDER BY exp_categories.cat_name ASC"
+                                            style="nested"}
+                                    <div class="p-categories p-top"><span class="p-category category-id-5" rel="category">{cat_name}</span> </div>
+                                    {/exp:query}
+                                    
+                                    <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                    <div class="p-divider is-divider-bold"></div>
+                                    <div class="p-meta">
+                                        <div class="meta-inner is-meta">
+                                            <span class="meta-el meta-update">
+                                                <i class="rbi rbi-time"></i> <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/exp:channel:entries}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d0cf0a9" data-element_type="section">
+    <div class="elementor-container ptb-90  elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5d4b639"
+            data-id="5d4b639" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-f396043 elementor-widget elementor-widget-foxiz-heading animated fadeIn"
+                    data-id="f396043" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}"
+                    data-widget_type="foxiz-heading.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_f396043" class="block-h heading-layout-4">
+                            <div class="heading-inner">
+                                <h3 class="heading-title"><a
+                                        href="{path=posts}">Conservation Stories</a>
+                                </h3>
+                                <div class="heading-tagline h6"><a class="heading-tagline-label"
+                                        href="{path=posts}">View All</a><i
+                                        class="rbi rbi-cright heading-tagline-icon"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-7db006c elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                    data-id="7db006c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-custom no-marging-rl">
+                        <div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-ede5b02"
+                            data-id="ede5b02" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-2158d45 elementor-widget elementor-widget-foxiz-overlay-flex"
+                                    data-id="2158d45" data-element_type="widget"
+                                    data-widget_type="foxiz-overlay-flex.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_2158d45" class="block-wrap block-overlay block-overlay-flex light-overlay-scheme p-gradient rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 is-gap-none hovering-scale ecat-text">
+                                            
+                                            {exp:channel:entries channel="posts" category="1"}
+                                            {if count == 1}
+                                            <div class="block-inner">
+                                                <div class="p-wrap p-overlay p-overlay-flex" data-pid="1497">
+
+                                                    <div class="overlay-holder">
+                                                        <div class="p-featured">
+                                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                <img width="860" height="573" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="{title}" decoding="async" loading="lazy" />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="overlay-wrap">
+                                                            <div
+                                                                class="p-content overlay-inner overlay-text">
+                                                                <div class="p-categories p-top">
+                                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                                    <a class="p-category category-id-3" href="{path=posts/category/{last_segment}}" rel="category">{cat_name}</a>
+                                                                    {/exp:query}
+                                                                </div>
+                                                                <h2 class="entry-title">
+                                                                    <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                                </h2>
+
+                                                                <div class="p-divider is-divider-bold">
+                                                                </div>
+                                                                <div class="p-meta">
+                                                                    <div class="meta-inner is-meta">
+                                                                        <span class="meta-el meta-update">
+                                                                            <i class="rbi rbi-time"></i>
+                                                                            <time class="date date-updated"
+                                                                                title="2023-02-04T02:30:24+00:00">{entry_date format="%M %d, %Y"}</time>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/if}
+                                            {/exp:channel:entries}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9905f51 rb-sticky"
+                            data-id="9905f51" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-40faba8 elementor-widget elementor-widget-foxiz-grid-flex-2" data-id="40faba8" data-element_type="widget" data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_40faba8" class="block-wrap block-grid block-grid-flex-2 first-featured rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 is-gap-20 hovering-scale ecat-text is-mobile-list">
+                                            
+                                            <!-- Ad start here -->
+                                            <div class="block-inner">
+                                                <div class="p-wrap p-box p-grid-box-2 box-bg" data-pid="13">
+                                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076347910565197"
+                                                        crossorigin="anonymous"></script>
+                                                    <!-- Responsive for sidebar top image and bottom text -->
+                                                    <ins class="adsbygoogle"
+                                                        style="display:block"
+                                                        data-ad-client="ca-pub-1076347910565197"
+                                                        data-ad-slot="3849663719"
+                                                        data-ad-format="auto"
+                                                        data-full-width-responsive="true"></ins>
+                                                    <script>
+                                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <!-- Ad ends here -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-42156e5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                    data-id="42156e5" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-custom no-marging-rl">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-88f1216"
+                            data-id="88f1216" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-6620f5d elementor-widget elementor-widget-foxiz-list-small-2"
+                                    data-id="6620f5d" data-element_type="widget"
+                                    data-widget_type="foxiz-list-small-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_6620f5d"
+                                            class="block-wrap block-small block-list block-list-small-2 rb-columns rb-col-2 rb-tcol-2 rb-mcol-1 is-gap-custom ecat-text featured-left">
+                                            <div class="block-inner">
+
+                                                {exp:channel:entries channel="posts" dynamic="no" category_name="sponsored" limit="4"}
+                                                {post_details}
+
+                                                <div class="p-wrap p-small p-list-small-2" data-pid="21">
+                                                    <div class="feat-holder">
+                                                        <div class="p-featured ratio-v1">
+                                                            <a class="p-flink" href="{url_title_path=post}"
+                                                                title="{title}">
+                                                                <img width="330" height="220" src="{post_details:display_image}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-content sponsored-po">
+
+                                                        <div class="p-categories p-top">
+                                                            <span class="p-category category-id-1" rel="category">Sponsored</span>
+                                                        </div>
+
+                                                        <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+
+                                                {/post_details}
+                                                {/exp:channel:entries}
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="elementor-element elementor-element-2ee04d1 elementor-widget elementor-widget-foxiz-grid-flex-2"
+                                    data-id="2ee04d1" data-element_type="widget"
+                                    data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_2ee04d1"
+                                            class="block-wrap block-grid block-grid-flex-2 first-featured rb-columns rb-col-3 rb-tcol-3 rb-mcol-1 is-gap-custom light-scheme hovering-scale ecat-text">
+                                            <div class="block-inner">
+
+                                                {exp:channel:entries channel="posts" orderby="random" limit="3" category="3|2|4"}
+                                                <div class="p-wrap p-box p-grid-box-2 box-bg">
+                                                    <div class="grid-box">
+
+                                                        <div class="feat-holder">
+                                                            <div class="p-featured">
+                                                                <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                    <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="p-categories p-top">
+                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                        FROM exp_categories 
+                                                        JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                        WHERE exp_categories.group_id IN ('3') 
+                                                        AND exp_category_posts.entry_id = '{entry_id}' 
+                                                        ORDER BY exp_categories.cat_name ASC"
+                                                        style="nested"}
+                                                        <p class="p-category pt-10"><a href="{path=posts/category/{last_segment}}" rel="category">{cat_name}</a></p>
+                                                    {/exp:query}
+                                                        </div>
+
+                                                        <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                                        <div class="p-divider is-divider-bold"></div>
+
+                                                        <div class="p-meta">
+                                                            <div class="meta-inner is-meta">
+                                                                <span class="meta-el meta-update">
+                                                                    <i class="rbi rbi-time"></i> <time class="date date-updated" title="2023-02-04T02:08:35+00:00">{entry_date format="%M %d, %Y"}</time>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-element-31401e1" data-id="31401e1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container ptb-90 mid-container elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7127c7e" data-id="7127c7e" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                
+                <div class="elementor-element elementor-element-3e01505 elementor-widget elementor-widget-foxiz-heading" data-id="3e01505" data-element_type="widget" data-widget_type="foxiz-heading.default">
+                    <div class="elementor-widget-container">
+                            <div id="uid_3e01505" class="block-h heading-layout-c10 light-scheme"><div class="heading-inner"><h2 class="heading-title"><span>HOW THEY BEHAVE?</span></h2>
+                                <div class="heading-tagline h6"><span class="heading-tagline-label">Lean how Wild animals and Birds behaves to cope with their environment </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-0d8dd00 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                    data-id="0d8dd00" data-element_type="widget" data-widget_type="divider.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-divider">
+                            <span class="elementor-divider-separator">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-ded428b elementor-widget elementor-widget-foxiz-grid-flex-2" data-id="ded428b" data-element_type="widget" data-widget_type="foxiz-grid-flex-2.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_ded428b"
+                            class="block-wrap block-grid block-grid-flex-2 first-featured rb-columns rb-col-4 rb-tcol-2 rb-mcol-1 is-gap-custom hovering-scale is-pagi-text ecat-text is-mobile-list">
+                            <div class="block-inner">
+
+                                {exp:channel:entries channel="posts" category="8|36" limit="8" orderby="random"}
+                                <div class="p-wrap p-box p-grid-box-2 box-bg" data-pid="77">
+                                    <div class="grid-box">
+                                        <div class="feat-holder">
+                                            <div class="p-featured">
+                                                <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                    <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" decoding="async" loading="lazy"/>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        {exp:query sql=" SELECT exp_categories.cat_name 
+                                        FROM exp_categories 
+                                        JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                        WHERE exp_categories.group_id IN ('3') 
+                                        AND exp_category_posts.entry_id = '{entry_id}' 
+                                        ORDER BY exp_categories.cat_name ASC"
+                                        style="nested"}
+                                        <div class="p-categories p-top"><span class="p-category category-id-3" rel="category">{cat_name}</span></div>
+                                        {/exp:query}
+                                        <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                        <div class="p-divider is-divider-bold"></div>
+                                        <div class="p-meta">
+                                            <div class="meta-inner is-meta">
+                                                <span class="meta-el meta-update mobile-hide mobile-last-meta">
+                                                    <i class="rbi rbi-time"></i> <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/exp:channel:entries}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{embed=layout/_video_feed}
+{embed=layout/_featured}

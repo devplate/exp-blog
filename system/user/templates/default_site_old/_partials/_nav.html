@@ -1,0 +1,357 @@
+<nav id="site-navigation" class="main-menu-wrap" aria-label="main menu">
+    <ul id="menu-main" class="main-menu rb-menu large-menu" itemscope itemtype="{site_url}">
+        <li id="menu-item-1585" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+            <a href="{site_url}" aria-current="page"><span>Home</span></a>
+        </li>
+        <li id="menu-item-1737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1737 menu-item-has-children menu-has-child-mega is-child-wide mega-hierarchical">
+            <a href="{path=posts}"><span>Explore</span></a>
+            <div class="mega-dropdown is-mega-category">
+                <div class="rb-container edge-padding">
+                    <div class="mega-dropdown-inner light-scheme">
+
+                        {exp:channel:category_heading category_id="11"}
+                            <div class="mega-col mega-col-intro">
+                                <div class="h3"><a class="p-url" href="{path=posts/category/african-wildlife}">{category_name}</a></div>
+                                <div class="category-hero-wrap">
+                                    <div class="category-hero-item">
+                                        <div class="category-hero-item-inner"><img loading="lazy" decoding="async" src="{category_image}" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="cbox-description">{category_description}</div>
+                                <a class="mega-link p-readmore" href="{path=posts/category/african-wildlife}"><span>Show More</span><i class="rbi rbi-cright" aria-hidden="true"></i></a>
+                            </div>
+                        {/exp:channel:category_heading}
+
+                        <div class="mega-col mega-col-trending">
+                            <div class="mega-header"><i class="rbi rbi-trending" aria-hidden="true"></i><span class="h4">Top Stories</span></div>
+                            <div id="mega-listing-trending-1737"
+                                class="block-wrap block-small block-list block-list-small-2 rb-columns rb-col-1">
+                                <div class="block-inner">
+
+                                    {exp:channel:entries channel="posts" limit="3" category="11" dynamic="no" orderby="view_count" sort="desc"}
+                                        <div class="p-wrap p-small p-list-small-2">
+                                            <div class="feat-holder">
+                                            <div class="p-featured ratio-v1"> 
+                                                <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                <img width="150" height="150" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> 
+                                                </a>
+                                            </div>
+                                            </div>
+
+                                            <div class="p-content"> 
+                                            <span class="entry-title h4"> 
+                                                <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                            </span>
+
+                                            {if rate_the_post!="none"}
+                                                <div class="review-meta is-meta is-rstyle-0 type-star">
+                                                <div class="review-meta-inner">
+                                                    <span class="rstar-wrap">
+                                                    <span class="rstar-bg" style="width:{rate_the_post}{rate_the_post}%"></span>
+                                                    <span class="rstar"><i class="rbi rbi-star" aria-hidden="true"></i></span>
+                                                    <span class="rstar"><i class="rbi rbi-star" aria-hidden="true"></i></span>
+                                                    <span class="rstar"><i class="rbi rbi-star" aria-hidden="true"></i></span>
+                                                    <span class="rstar"><i class="rbi rbi-star" aria-hidden="true"></i></span>
+                                                    <span class="rstar"><i class="rbi rbi-star" aria-hidden="true"></i></span>
+                                                    </span>
+                                                </div>
+                                                </div>
+                                            {if:else}
+                                                <div class="p-meta">
+                                                <div class="meta-inner is-meta">
+                                                    <span class="meta-el meta-update">
+                                                    <time class="date date-updated" title="2022-02-11T04:10:22+00:00">{entry_date format="%M %d, %Y"}</time>
+                                                    </span>
+                                                </div>
+                                                </div>
+                                            {/if}
+                                            </div>
+                                        </div>
+                                        {/exp:channel:entries}
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mega-col mega-col-latest">
+                            <div class="mega-header"><i class="rbi rbi-clock" aria-hidden="true"></i><span class="h4">Latest News</span></div>
+                            <div id="mega-listing-latest-1737"
+                                class="block-wrap block-small block-list block-list-small-1 bottom-border is-b-border-gray no-last-bb">
+                                <div class="block-inner">
+
+                                    {exp:channel:entries channel="posts" limit="4" dynamic="no"}
+                                    {if "{post_details}{post_details:category_display}{/post_details}" =="4"}
+                                    <div class="p-wrap p-small p-list-small-1" data-pid="1561">
+                                        <div class="p-content">
+                                            <span class="entry-title h4">
+                                                <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                            </span>
+
+                                            {if "{sponsored_post}{sponsored_post:sponsor_name}{/sponsored_post}" ==""}
+                                            <div class="p-meta">
+                                                <div class="meta-inner is-meta">
+                                                    <span class="meta-el meta-update">
+                                                        <time class="date date-updated">{entry_date format="%M %d, %Y"}</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {if:else}
+                                            {sponsored_post}
+                                            <div class="sponsor-meta meta-text">
+                                                <div class="sponsor-inner"> <span class="sponsor-icon"><i class="rbi rbi-notification" aria-hidden="true"></i></span>
+                                                    <span class="sponsor-label">Sponsored by</span>
+                                                    <span class="sponlogo-wrap meta-bold">
+                                                        <a class="sponsor-link" href="{sponsored_post:sponsor_link}" target="_blank" rel="noopener nofollow" aria-label="Sponsored by">
+                                                            <img loading="lazy" decoding="async" class="sponsor-brand-default is-logo" data-mode="default" src="{sponsored_post:sponsor_logo_dark}" width="168" height="52" alt="Sponsored by" />
+                                                            <img loading="lazy" decoding="async" class="sponsor-brand-light is-logo" data-mode="dark" src="{sponsored_post:sponsor_logo_dark}" width="168" height="52" alt="Sponsored by" />
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {/sponsored_post}
+                                            {/if}
+
+                                        </div>
+                                    </div>
+                                    {/if}
+                                    {/exp:channel:entries}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li id="menu-item-1736"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1736 menu-item-has-children menu-has-child-mega is-child-wide">
+            <a href="{path=posts/trending}"><span>Trending</span></a>
+            <div class="mega-dropdown is-mega-category">
+                <div class="rb-container edge-padding">
+                    <div class="mega-dropdown-inner light-scheme">
+                        <div class="mega-header mega-header-fw">
+                            <span class="h4">Trending stories</span>
+                            <a class="mega-link is-meta" href="{path=posts/trending}"><span>Show More</span><i class="rbi rbi-cright" aria-hidden="true"></i></a>
+                        </div>
+
+                        <div id="mega-listing-1736"
+                            class="block-wrap block-small block-grid block-grid-small-1 rb-columns rb-col-5 is-gap-10">
+                            <div class="block-inner">
+
+                                {exp:channel:entries channel="posts" limit="5" dynamic="no"}
+                                {post_details}
+                                {if post_details:category_display == "5"}
+                                <div class="p-wrap p-grid p-grid-small-1" data-pid="1599">
+                                    <div class="feat-holder overlay-text">
+                                        <div class="p-featured"> <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                <img width="330" height="220" src="{post_details:display_image}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> </a>
+
+                                                {categories}
+                                                {if category_name =="Video"}
+                                                <aside class="p-format-overlay format-style-bottom">
+                                                    <span class="p-format format-radio">
+                                                        <i class="rbi rbi-video" aria-hidden="true"></i>
+                                                    </span>
+                                                </aside>
+                                                {/if}
+
+                                                {if category_name =="Audio"}
+                                                <aside class="p-format-overlay format-style-bottom">
+                                                    <span class="p-format format-radio">
+                                                        <i class="rbi rbi-audio" aria-hidden="true"></i>
+                                                    </span>
+                                                </aside>
+                                                {/if}
+
+                                                {if category_name =="Images"}
+                                                <aside class="p-format-overlay format-style-bottom">
+                                                    <span class="p-format format-gallery">
+                                                    <i class="rbi rbi-gallery" aria-hidden="true"></i>
+                                                    <!-- <span class="gallery-count meta-text">5</span></span> -->
+                                                </aside>
+                                                {/if}
+                                                {/categories} 
+                                            </div>
+                                    </div>
+
+                                    <div class="p-content">
+                                        <span class="entry-title h4">
+                                            <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                        </span>
+                                        <div class="review-meta is-meta is-rstyle-0 type-score has-bookmark">
+                                            {if rate_the_post!="none"}
+                                            <div class="review-meta-inner">
+                                                <span class="rline-wrap">
+                                                    <span class="rline activated"></span>
+                                                    <span class="rline activated"></span>
+                                                    <span class="rline activated"></span>
+                                                    <span class="rline activated"></span>
+                                                    <span class="rline activated"></span>
+                                                </span>
+
+                                                <div class="review-extra">
+                                                    <span class="review-description"> <strong class="meta-bold">{rate_the_post}.0</strong> out of 10</span>
+                                                </div>
+
+                                            </div>
+                                            {if:else}
+                                            
+                                            <div class="meta-inner is-meta">
+                                                <span class="meta-el meta-read"> <i class="rbi rbi-watch" aria-hidden="true"></i>{post_details:read_time} Mins Read</span>
+                                            </div>
+                                            {/if}
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                {/if}
+                                {/post_details}
+                                {/exp:channel:entries}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+        <li id="menu-item-1738"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1738">
+            <a href="javascript:void(0);"><span>Discover</span></a>
+            <ul class="sub-menu">
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Wildlife Stories<span class="menu-sub-title meta-text">Hot</span></span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="2"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Conservation Stories</span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="1"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Culture Stories <span class="menu-sub-title meta-text">New</span></span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="11"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Sensitive Contents</span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="6"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Birds Stories<span class="menu-sub-title meta-text">New</span></span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="7"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Ocean Stories</span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="8"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+                    <a href="javascript:void(0);"><span>Stories by Country <span class="menu-sub-title meta-text">New</span></span></a>
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="3"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+                <li id="menu-item-1754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1754">
+
+                    <a href="javascript:void(0);"><span>Post Type</span></a>
+
+                    <ul class="sub-menu">
+                        {exp:channel:categories category_group="10"}
+                        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1755">
+                            <a href="{path=posts}"><span>{category_name}</span></a>
+                        </li>
+                        {/exp:channel:categories}
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li id="menu-item-1682"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1682">
+            <a href="javascript:void(0);"><span>More</span></a>
+            <ul class="sub-menu">
+
+                <li id="menu-item-1683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1683">
+                    <a href="{path=submit-content}"><span>Submit Content</span></a>
+                </li>
+
+                <!-- <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=contact-us}"><span>Promote your Business</span></a>
+                </li> -->
+
+                <!-- <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=contact-us}"><span>Our Products</span></a>
+                </li> -->
+
+                <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=donation}"><span>Donate</span></a>
+                </li>
+
+                <!-- <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=contact-us}"><span>Complains</span></a>
+                </li> -->
+
+                <!-- <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=contact-us}"><span>Join meeting</span></a>
+                </li> -->
+
+                <li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1688">
+                    <a href="javascript:void(0);"><span>My Bookmarks<span class="menu-sub-title meta-text">Coming..</span></span></a>
+                </li>
+
+                <li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1685">
+                    <a href="{path=contact-us}"><span>Contact Us</span></a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>

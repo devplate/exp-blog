@@ -1,0 +1,91 @@
+
+<div data-elementor-type="wp-page" data-elementor-id="1387" class="elementor elementor-1387" data-elementor-settings="[]">
+    <div class="elementor-section-wrap">
+
+<div class="elementor-section elementor-top-section pt-80 elementor-element elementor-element-970a442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="970a442" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+    <div class="elementor-container elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-7d1ef53 elementor-invisible" data-id="7d1ef53" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-f396043 elementor-invisible elementor-widget elementor-widget-foxiz-heading" data-id="f396043" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="foxiz-heading.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_f396043" class="block-h heading-layout-1">
+                            <div class="heading-inner">
+                                <h3 class="heading-title"><a href="blog/index.html">Latest News</a></h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-843bf0c elementor-invisible elementor-widget elementor-widget-foxiz-list-1" data-id="843bf0c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="foxiz-list-1.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_843bf0c" class="block-wrap block-list block-list-1"> 
+
+                            <div class="wrap-list block-inner">
+                                {exp:channel:entries channel="posts" orderby="date" sort="asc"  limit="3" pagenate="bottom"} 
+                                <div class="article p-wrap post-981 p-list p-list-1 featured-right ecat-bg-1">
+                                    <div class="list-holder">
+                                        <div class="list-feat-holder">
+                                            <div class="feat-holder">
+                                                <div class="p-featured">
+                                                    <a class="p-flink" href="{title}" title="{title}"> <img width="330" height="220" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="{image:image_caption}" loading="lazy" /> </a>
+                                                </div>
+
+                                                <div class="p-categories p-top"><a class="p-category category-id-13" href="" rel="category">Category Name</a></div>
+
+                                            </div>
+                                        </div>
+                                        <div class="p-content">
+                                            <h3 class="entry-title"> <a class="p-url" href="" rel="bookmark">{title}</a></h3>
+                                            <p class="entry-summary">{post_details}{post_details:recap}{/post_details}<span>&hellip;</span></p>
+                                            <div class="p-meta has-bookmark">
+                                                <div class="meta-inner is-meta">
+                                                <a class="meta-avatar" href="{author}">
+                                                    <img loading="lazy" src="{post_details}{post_details:display_image}{/post_details}" width="44" height="44" alt="{author}" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 photo avatar-default" />
+                                                </a> 
+                                                <span class="meta-el meta-author"> 
+                                                    <a href="{author}">{author}</a> 
+                                                </span> 
+                                                <span class="meta-el meta-date"> 
+                                                    <abbr class="date published" title="{entry_date format="%d %M %Y"}">{entry_date format="%d %M %Y"}</abbr> 
+                                                </span>
+                                            </div> 
+                                            <span class="rb-bookmark bookmark-trigger" data-pid="981">
+                                                <i data-title="Save it" class="rbi rbi-bookmark">
+                                                </i>
+                                                <i data-title="Remove" class="bookmarked-icon rbi rbi-bookmark-fill"></i>
+                                            </span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {paginate}
+                                <div class="pagination pagination-wrap pagination-infinite">
+                                
+                                    {pagination_links}
+
+                                        {next_page}
+                                        <a href="{pagination_url}" class="older">
+                                            <span>Show More</span>
+                                            <i class="rb-loader" aria-hidden="true" style="display: none; opacity: 0;"></i>
+                                        </a>
+
+                                        {/next_page}
+                                            
+                                    {/pagination_links}
+                                </div>
+                        
+                                {/paginate}
+                                {/exp:channel:entries}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

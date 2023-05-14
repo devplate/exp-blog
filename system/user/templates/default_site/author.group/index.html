@@ -1,0 +1,243 @@
+{layout=layout/wrapper-home-loading}
+
+
+{exp:channel:entries username="{segment_2}" limit="1"}
+{exp:seo_lite default_title="Blog posts by {screen_name}"}
+<section class="elementor-section elementor-top-section elementor-element mb-30 elementor-section-boxed elementor-section-height-default elementor-section-height-default" >
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container bottom-border-5 prl-10-sm elementor-column-gap-no">
+        <div class="pt-40 pb-60">
+            <div class="rb-container edge-padding">
+                <div class="author-header-inner">
+                    <aside class="breadcrumb-wrap breadcrumb-navxt archive-breadcrumb">
+                        <div class="breadcrumb-inner" typeof="BreadcrumbList">
+                            <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                                    title="Go to Wild Animals." href="#" class="home"><span
+                                        property="name">Joy Safari Bay</span></a>
+                                <meta property="position" content="1"></span> &gt; <span class="author current-item">Articles
+                                Creator</span></div>
+                    </aside>
+
+                    {exp:member:memberlist}
+                    <div class="ubio">
+                        <div class="ubio-inner">
+                            {if avatar!=""}
+                            <div class="bio-info bio-avatar">
+                                <img alt="Avatar photo"
+                                    src="{avatar_url}"
+                                    srcset="{avatar_url} 2x"
+                                    class="avatar avatar-200 photo" height="200" width="200" loading="lazy" decoding="async">
+                            </div>
+                            {/if}
+                            <div class="bio-content">
+                                <h2 class="bio-title">{screen_name}</h2>
+                                <div class="bio-description">{biography}</div>
+                                <div class="usocials meta-text tooltips-n">
+                                    <div class="bio-job">Senior Editor</div>
+                                    <span class="ef-label">Follow: </span>
+                                    <a class="social-link-website" aria-label="Website" data-title="Website" href="{member_website}" target="_blank"
+                                        rel="noopener nofollow"><i class="rbi rbi-portfolio-o" aria-hidden="true"></i></a>
+                                        <a class="social-link-facebook" aria-label="Facebook" data-title="Facebook" href="{member_facebook}" target="_blank" rel="noopener nofollow"><i class="rbi rbi-facebook" aria-hidden="true"></i></a>
+                                        <a class="social-link-twitter" aria-label="Twitter" data-title="Twitter" href="{member_twitter}" target="_blank" rel="noopener nofollow"><i class="rbi rbi-twitter" aria-hidden="true"></i></a>
+                                        <a class="social-link-instagram" aria-label="Instagram" data-title="Instagram" href="{member_instagram}" target="_blank" rel="noopener nofollow"><i class="rbi rbi-instagram" aria-hidden="true"></i></a>
+                                        <a class="social-link-rss" aria-label="Rss" data-title="Rss" href="{member_rss}" target="_blank" rel="noopener nofollow"><i class="rbi rbi-rss" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/exp:member:memberlist}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{/exp:channel:entries}
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-970a442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="970a442" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container pb-90 elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-7d1ef53 animated fadeIn"
+        data-id="7d1ef53" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+
+            <div class="elementor-element elementor-element-9262f1d elementor-widget elementor-widget-foxiz-list-box-1"
+                data-id="9262f1d" data-element_type="widget" data-widget_type="foxiz-list-box-1.default">
+                <div class="elementor-widget-container">
+                    <div id="uid_9262f1d" class="block-wrap block-big block-list block-list-box-1 ecat-bg-2 is-feat-left">
+                        
+                        <div class="wrap-list block-inner">
+                            {exp:channel:entries channel="posts" orderby="date" limit="6" username="{segment_2}" paginate="bottom"}
+                            
+                            <!-- display ads in every after 3 posts -->
+                            {if count %3==0}
+                            <div class="article p-wrap p-list p-box p-list-1 p-list-box-1 box-bg" data-pid="1599">
+                                <div class="list-box">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076347910565197"
+                                        crossorigin="anonymous"></script>
+                                    <ins class="adsbygoogle"
+                                        style="display:block"
+                                        data-ad-format="fluid"
+                                        data-ad-layout-key="-en+a+er-7r-8d"
+                                        data-ad-client="ca-pub-1076347910565197"
+                                        data-ad-slot="1037961257"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                            </div>
+                            {/if}
+                            <!-- ads end here -->
+                            
+                            <div class="article p-wrap p-list p-box p-list-1 p-list-box-1 box-bg" data-pid="1599">
+                                <div class="list-box">
+                                    <div class="list-holder">
+
+                                        <div class="list-feat-holder">
+                                            <div class="feat-holder overlay-text">
+                                                    <div class="p-featured">
+                                                        <a class="p-flink" href="" title="{title}">
+                                                            <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy">
+                                                        </a>
+
+                                                        {categories}
+                                                        {if category_name =="Video"}
+                                                        <aside class="p-format-overlay format-style-bottom">
+                                                            <span class="p-format format-radio">
+                                                                <i class="rbi rbi-video" aria-hidden="true"></i>
+                                                            </span>
+                                                        </aside>
+                                                        {/if}
+
+                                                        {if category_name =="Audio"}
+                                                        <aside class="p-format-overlay format-style-bottom">
+                                                            <span class="p-format format-radio">
+                                                                <i class="rbi rbi-audio" aria-hidden="true"></i>
+                                                            </span>
+                                                        </aside>
+                                                        {/if}
+
+                                                        {if category_name =="Images"}
+                                                        <aside class="p-format-overlay format-style-bottom">
+                                                            <span class="p-format format-gallery">
+                                                            <i class="rbi rbi-gallery" aria-hidden="true"></i>
+                                                            <!-- <span class="gallery-count meta-text">5</span></span> -->
+                                                        </aside>
+                                                        {/if}
+                                                        {/categories} 
+
+                                                    </div>
+                                                
+                                                    <div class="p-categories p-top">
+                                                        {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                        FROM exp_categories 
+                                                                        JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                        WHERE exp_categories.group_id IN ('3') 
+                                                                        AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                        ORDER BY exp_categories.cat_name ASC"
+                                                                        style="nested"}
+                                                        <span class="p-category category-id-23" rel="category">{cat_name}</span>
+                                                        {/exp:query}
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-content">
+                                            <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                            <p class="entry-summary">{post_details}{post_details:recap}{/post_details}
+                                            </p>
+
+                                             {if "{sponsored_post}{sponsored_post:sponsor_name}{/sponsored_post}" =="" AND rate_the_post=="none"}
+                                            <div class="p-meta has-bookmark">
+                                                <div class="meta-inner is-meta">
+                                                    <a class="meta-el meta-avatar" href="{site_url}index.php/author/{username}">
+                                                        <img src="{avatar_url}" width="44" height="44" alt="Connor" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 alignnone photo">
+                                                    </a>
+                                                    <span class="meta-el meta-author">
+                                                        <a href="{site_url}index.php/author/{username}">{screen_name}</a>
+                                                    </span>
+                                                    <span class="meta-el meta-read"><i class="rbi rbi-watch" aria-hidden="true"></i>{post_details}{post_details:read_time}{/post_details} Mins Read</span>
+                                                </div>
+                                                <span class="rb-bookmark bookmark-trigger loaded" data-pid="1546">
+                                                    <i class="rbi rbi-bookmark" aria-hidden="true" data-title="Save it"></i>
+                                                    <i class="bookmarked-icon rbi rbi-bookmark-fill" aria-hidden="true" data-title="Undo Save"></i>
+                                                </span>
+                                            </div>
+                                            {/if}
+
+                                            
+                                            {if rate_the_post!="none" AND "{sponsored_post}{sponsored_post:sponsor_name}{/sponsored_post}"==""}
+                                            <div class="review-meta is-meta is-rstyle-1 type-score has-bookmark">
+                                                <div class="review-meta-inner"><span class="rline-wrap"><span
+                                                            class="rline activated"></span><span
+                                                            class="rline activated"></span><span
+                                                            class="rline activated"></span><span
+                                                            class="rline activated"></span><span
+                                                            class="rline activated"></span></span>
+                                                    <div class="review-extra">
+                                                        <span class="review-description"> <strong class="meta-bold">{rate_the_post}.0</strong> out of 10</span>
+                                                        <span class="extra-meta meta-bold">{if rate_the_post>=9}Excellent value{/if}{if rate_the_post==8}Good value{/if}{if rate_the_post==7}Good value{/if}{if rate_the_post==6}Average value{/if}{if rate_the_post==5}Average value{/if}</span>
+                                                    </div>
+                                                </div>
+                                                <span class="rb-bookmark bookmark-trigger loaded"
+                                                    data-pid="1599"><i class="rbi rbi-bookmark" aria-hidden="true"
+                                                        data-title="Save it"></i>
+                                                    <i class="bookmarked-icon rbi rbi-bookmark-fill"
+                                                        aria-hidden="true" data-title="Undo Save"></i>
+                                                </span>
+                                            </div>
+                                            {/if}
+
+
+                                            {sponsored_post}
+                                            {if "{sponsored_post:sponsor_name}" !=""}
+                                            <div class="sponsor-meta meta-text">
+                                                <div class="sponsor-inner"> <span class="sponsor-icon"><i class="rbi rbi-notification" aria-hidden="true"></i></span> <span class="sponsor-label">Sponsored by</span>
+                                                        <span class="sponlogo-wrap meta-bold">
+                                                        <a class="sponsor-link" href="{sponsored_post:sponsor_link}" target="_blank" rel="noopener nofollow" aria-label="Sponsored by">
+                                                            <img loading="lazy" decoding="async" class="sponsor-brand-default is-logo" data-mode="default" src="{sponsored_post:sponsor_logo_white}" width="212" height="52" alt="{sponsored_post:sponsor_name}">
+                                                            <img loading="lazy" decoding="async" class="sponsor-brand-light is-logo" data-mode="dark" src="{sponsored_post:sponsor_logo_dark}" width="212" height="52" alt="{sponsored_post:sponsor_name}">
+                                                        </a>
+                                                    </span>
+                                                </div>
+
+                                                <span class="rb-bookmark bookmark-trigger loaded" data-pid="1557"><i
+                                                        class="rbi rbi-bookmark" aria-hidden="true"
+                                                        data-title="Save it"></i>
+                                                    <i class="bookmarked-icon rbi rbi-bookmark-fill"
+                                                        aria-hidden="true" data-title="Undo Save"></i></span>
+                                            </div>
+                                            {/if}
+                                            {/sponsored_post}
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {paginate}
+                            <div class="pagination pagination-wrap pagination-infinite">
+                                {pagination_links}
+                                    {next_page}
+                                    <a href="{pagination_url}" class="older"></a>
+                                    {/next_page}
+                                {/pagination_links}
+                            </div>
+                        {/paginate}
+                        {/exp:channel:entries}
+                        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6c530d1 rb-sticky is-sidebar" data-id="6c530d1" data-element_type="column">
+        <div class="sidebar-wrap single-sidebar">
+            {embed=layout/_sidebar}
+        </div>
+    </div>
+    </div>
+</section>

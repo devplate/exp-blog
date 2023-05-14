@@ -1,0 +1,401 @@
+{layout=layout/wrapper-home-loading}
+
+{exp:seo_lite default_title="Trending Posts"}
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="d0cf0a9" data-element_type="section">
+    <div class="elementor-container pb-60 pt-40 elementor-column-gap-no">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5d4b639"
+            data-id="5d4b639" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-7db006c elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                    data-id="7db006c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-custom">
+                        <div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-ede5b02"
+                            data-id="ede5b02" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-2158d45 elementor-widget elementor-widget-foxiz-overlay-flex"
+                                    data-id="2158d45" data-element_type="widget"
+                                    data-widget_type="foxiz-overlay-flex.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_2158d45" class="block-wrap block-overlay block-overlay-flex light-overlay-scheme p-gradient rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 is-gap-none hovering-scale ecat-text">
+                                            
+                                            {exp:channel:entries channel="posts"}
+                                            {if count == 1 }
+                                            <div class="block-inner">
+                                                <div class="p-wrap p-overlay p-overlay-flex" data-pid="1497">
+
+                                                    <div class="overlay-holder">
+                                                        <div class="p-featured">
+                                                            <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                <img width="860" height="573" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="{title}" decoding="async" loading="lazy" />
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="overlay-wrap">
+                                                            <div
+                                                                class="p-content overlay-inner overlay-text">
+                                                                <div class="p-categories p-top">
+                                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                                    <a class="p-category category-id-3" href="{path=posts/category/{last_segment}}" rel="category">{cat_name}</a>
+                                                                    {/exp:query}
+                                                                </div>
+                                                                <h2 class="entry-title">
+                                                                    <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                                </h2>
+
+                                                                <div class="p-divider is-divider-bold">
+                                                                </div>
+                                                                <div class="p-meta">
+                                                                    <div class="meta-inner is-meta">
+                                                                        <span class="meta-el meta-update">
+                                                                            <i class="rbi rbi-time"></i>
+                                                                            <time class="date date-updated"
+                                                                                title="2023-02-04T02:30:24+00:00">{entry_date format="%M %d, %Y"}</time>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/if}
+                                            {/exp:channel:entries}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9905f51 rb-sticky"
+                            data-id="9905f51" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-40faba8 elementor-widget elementor-widget-foxiz-grid-flex-2" data-id="40faba8" data-element_type="widget" data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_40faba8" class="block-wrap block-grid block-grid-flex-2 first-featured rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 is-gap-20 hovering-scale ecat-text is-mobile-list">
+                                            
+                                            <!-- Ad start here -->
+                                            <div class="block-inner">
+                                                <div class="p-wrap p-box p-grid-box-2 box-bg" data-pid="13">
+                                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076347910565197"
+                                                        crossorigin="anonymous"></script>
+                                                    <!-- Responsive for sidebar top image and bottom text -->
+                                                    <ins class="adsbygoogle"
+                                                        style="display:block"
+                                                        data-ad-client="ca-pub-1076347910565197"
+                                                        data-ad-slot="3849663719"
+                                                        data-ad-format="auto"
+                                                        data-full-width-responsive="true"></ins>
+                                                    <script>
+                                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <!-- Ad ends here -->
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-42156e5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                    data-id="42156e5" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-custom">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-88f1216"
+                            data-id="88f1216" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-6620f5d elementor-widget elementor-widget-foxiz-list-small-2"
+                                    data-id="6620f5d" data-element_type="widget"
+                                    data-widget_type="foxiz-list-small-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_6620f5d"
+                                            class="block-wrap block-small block-list block-list-small-2 rb-columns rb-col-2 rb-tcol-2 rb-mcol-1 is-gap-custom ecat-text featured-left">
+                                            <div class="block-inner">
+
+                                                {exp:channel:entries channel="posts" dynamic="no" category_name="sponsored" limit="4"}
+                                                {post_details}
+
+                                                <div class="p-wrap p-small p-list-small-2" data-pid="21">
+                                                    <div class="feat-holder">
+                                                        <div class="p-featured ratio-v1">
+                                                            <a class="p-flink" href="{url_title_path=post}"
+                                                                title="{title}">
+                                                                <img width="330" height="220" src="{post_details:display_image}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-content">
+
+                                                        <div class="p-categories p-top">
+                                                            <span class="p-category category-id-1" rel="category">Sponsored</span>
+                                                        </div>
+
+                                                        <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+
+                                                {/post_details}
+                                                {/exp:channel:entries}
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="elementor-element elementor-element-2ee04d1 elementor-widget elementor-widget-foxiz-grid-flex-2"
+                                    data-id="2ee04d1" data-element_type="widget"
+                                    data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_2ee04d1"
+                                            class="block-wrap block-grid block-grid-flex-2 first-featured rb-columns rb-col-3 rb-tcol-3 rb-mcol-1 is-gap-custom light-scheme hovering-scale ecat-text">
+                                            <div class="block-inner">
+
+                                                {exp:channel:entries channel="posts" orderby="random" limit="3" category_name="{last_segment}"}
+                                                <div class="p-wrap p-box p-grid-box-2 box-bg">
+                                                    <div class="grid-box">
+
+                                                        <div class="feat-holder">
+                                                            <div class="p-featured">
+                                                                <a class="p-flink" href="{url_title_path=post}" title="{title}">
+                                                                    <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy" /> </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="p-categories p-top">
+                                                    {exp:query sql=" SELECT exp_categories.cat_name 
+                                                        FROM exp_categories 
+                                                        JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                        WHERE exp_categories.group_id IN ('3') 
+                                                        AND exp_category_posts.entry_id = '{entry_id}' 
+                                                        ORDER BY exp_categories.cat_name ASC"
+                                                        style="nested"}
+                                                        <p class="p-category pt-10"><a href="{path=posts/category/{last_segment}}" rel="category">{cat_name}</a></p>
+                                                    {/exp:query}
+                                                        </div>
+
+                                                        <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                                        <div class="p-divider is-divider-bold"></div>
+
+                                                        <div class="p-meta">
+                                                            <div class="meta-inner is-meta">
+                                                                <span class="meta-el meta-update">
+                                                                    <i class="rbi rbi-time"></i> <time class="date date-updated" title="2023-02-04T02:08:35+00:00">{entry_date format="%M %d, %Y"}</time>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-970a442 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="970a442" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container pb-90 elementor-column-gap-custom">
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-7d1ef53 animated fadeIn"
+            data-id="7d1ef53" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-f396043 elementor-widget elementor-widget-foxiz-heading animated fadeIn"
+                    data-id="f396043" data-element_type="widget"
+                    data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}"
+                    data-widget_type="foxiz-heading.default">
+                    
+                    <div class="elementor-widget-container">
+                        <div id="uid_f396043" class="block-h heading-layout-4">
+                            <div class="heading-inner">
+                                <h3 class="heading-title">
+                                    Trending Stories
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-9262f1d elementor-widget elementor-widget-foxiz-list-box-1"
+                    data-id="9262f1d" data-element_type="widget" data-widget_type="foxiz-list-box-1.default">
+                    <div class="elementor-widget-container">
+                        <div id="uid_9262f1d" class="block-wrap block-big block-list block-list-box-1 ecat-bg-2 is-feat-left">
+                            <div class="wrap-list block-inner pt-20">
+                                {exp:channel:entries channel="posts" orderby="date" sort="desc" limit="6" paginate="bottom"}
+                                
+                                {if "{post_details}{post_details:category_display}{/post_details}" =="5"}
+                                <div class="article p-wrap p-list p-box p-list-1 p-list-box-1 box-bg" data-pid="1599">
+                                    <div class="list-box">
+                                        <div class="list-holder">
+
+                                            <div class="list-feat-holder">
+                                                <div class="feat-holder overlay-text">
+                                                        <div class="p-featured">
+                                                            <a class="p-flink" href="" title="{title}">
+                                                                <img width="420" height="280" src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="" decoding="async" loading="lazy">
+                                                            </a>
+
+                                                            {categories}
+                                                            {if category_name =="Video"}
+                                                            <aside class="p-format-overlay format-style-bottom">
+                                                                <span class="p-format format-radio">
+                                                                    <i class="rbi rbi-video" aria-hidden="true"></i>
+                                                                </span>
+                                                            </aside>
+                                                            {/if}
+
+                                                            {if category_name =="Audio"}
+                                                            <aside class="p-format-overlay format-style-bottom">
+                                                                <span class="p-format format-radio">
+                                                                    <i class="rbi rbi-audio" aria-hidden="true"></i>
+                                                                </span>
+                                                            </aside>
+                                                            {/if}
+
+                                                            {if category_name =="Images"}
+                                                            <aside class="p-format-overlay format-style-bottom">
+                                                                <span class="p-format format-gallery">
+                                                                <i class="rbi rbi-gallery" aria-hidden="true"></i>
+                                                                <!-- <span class="gallery-count meta-text">5</span></span> -->
+                                                            </aside>
+                                                            {/if}
+                                                            {/categories} 
+
+                                                        </div>
+                                                    
+                                                        <div class="p-categories p-top">
+                                                            {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                            FROM exp_categories 
+                                                                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                            WHERE exp_categories.group_id IN ('3') 
+                                                                            AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                            ORDER BY exp_categories.cat_name ASC"
+                                                                            style="nested"}
+                                                            <span class="p-category category-id-23" rel="category">{cat_name}</span>
+                                                            {/exp:query}
+                                                        </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-content">
+                                                <h3 class="entry-title"> <a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                                <p class="entry-summary">{post_details}{post_details:recap}{/post_details}
+                                                </p>
+
+                                                 {if "{sponsored_post}{sponsored_post:sponsor_name}{/sponsored_post}" =="" AND rate_the_post=="none"}
+                                                <div class="p-meta has-bookmark">
+                                                    <div class="meta-inner is-meta">
+                                                        <a class="meta-el meta-avatar" href="{site_url}index.php/author/{username}">
+                                                            <img src="{avatar_url}" width="44" height="44" alt="Connor" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 alignnone photo">
+                                                        </a>
+                                                        <span class="meta-el meta-author">
+                                                            <a href="{site_url}index.php/author/{username}">{screen_name}</a>
+                                                        </span>
+                                                        <span class="meta-el meta-read"><i class="rbi rbi-watch" aria-hidden="true"></i>{post_details}{post_details:read_time}{/post_details} Mins Read</span>
+                                                    </div>
+                                                    <span class="rb-bookmark bookmark-trigger loaded" data-pid="1546">
+                                                        <i class="rbi rbi-bookmark" aria-hidden="true" data-title="Save it"></i>
+                                                        <i class="bookmarked-icon rbi rbi-bookmark-fill" aria-hidden="true" data-title="Undo Save"></i>
+                                                    </span>
+                                                </div>
+                                                {/if}
+
+                                                
+                                                {if rate_the_post!="none" AND "{sponsored_post}{sponsored_post:sponsor_name}{/sponsored_post}"==""}
+                                                <div class="review-meta is-meta is-rstyle-1 type-score has-bookmark">
+                                                    <div class="review-meta-inner"><span class="rline-wrap"><span
+                                                                class="rline activated"></span><span
+                                                                class="rline activated"></span><span
+                                                                class="rline activated"></span><span
+                                                                class="rline activated"></span><span
+                                                                class="rline activated"></span></span>
+                                                        <div class="review-extra"><span
+                                                                class="review-description"><strong
+                                                                    class="meta-bold">{rate_the_post}.0</strong> out of 10</span><span
+                                                                class="extra-meta meta-bold">{if rate_the_post>=9}Excellent value{/if}{if rate_the_post==8}Good value{/if}{if rate_the_post==7}Good value{/if}{if rate_the_post==6}Average value{/if}{if rate_the_post==5}Average value{/if}</span></div>
+                                                    </div>
+                                                    <span class="rb-bookmark bookmark-trigger loaded"
+                                                        data-pid="1599"><i class="rbi rbi-bookmark" aria-hidden="true"
+                                                            data-title="Save it"></i>
+                                                        <i class="bookmarked-icon rbi rbi-bookmark-fill"
+                                                            aria-hidden="true" data-title="Undo Save"></i>
+                                                    </span>
+                                                </div>
+                                                {/if}
+
+
+                                                {sponsored_post}
+                                                {if "{sponsored_post:sponsor_name}" !=""}
+                                                <div class="sponsor-meta meta-text">
+                                                    <div class="sponsor-inner"> <span class="sponsor-icon"><i class="rbi rbi-notification" aria-hidden="true"></i></span> <span class="sponsor-label">Sponsored by</span>
+                                                            <span class="sponlogo-wrap meta-bold">
+                                                            <a class="sponsor-link" href="{sponsored_post:sponsor_link}" target="_blank" rel="noopener nofollow" aria-label="Sponsored by">
+                                                                <img loading="lazy" decoding="async" class="sponsor-brand-default is-logo" data-mode="default" src="{sponsored_post:sponsor_logo_white}" width="212" height="52" alt="{sponsored_post:sponsor_name}">
+                                                                <img loading="lazy" decoding="async" class="sponsor-brand-light is-logo" data-mode="dark" src="{sponsored_post:sponsor_logo_dark}" width="212" height="52" alt="{sponsored_post:sponsor_name}">
+                                                            </a>
+                                                        </span>
+                                                    </div>
+
+                                                    <span class="rb-bookmark bookmark-trigger loaded" data-pid="1557"><i
+                                                            class="rbi rbi-bookmark" aria-hidden="true"
+                                                            data-title="Save it"></i>
+                                                        <i class="bookmarked-icon rbi rbi-bookmark-fill"
+                                                            aria-hidden="true" data-title="Undo Save"></i></span>
+                                                </div>
+                                                {/if}
+                                                {/sponsored_post}
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {paginate}
+                                <div class="pagination pagination-wrap pagination-infinite">
+                                    {pagination_links}
+                                    {next_page}
+                                    <a href="{pagination_url}" class="older"></a>
+                                    {/next_page}
+                                    {/pagination_links}
+                                </div>
+                                {/paginate}
+                                {/if}
+                            {/exp:channel:entries}
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6c530d1 rb-sticky is-sidebar" data-id="6c530d1" data-element_type="column">
+            <div class="sidebar-wrap single-sidebar">
+                {embed=layout/_sidebar}
+            </div>
+        </div>
+    </div>
+</section>

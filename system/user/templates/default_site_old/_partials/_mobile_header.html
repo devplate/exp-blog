@@ -1,0 +1,175 @@
+<div class="header-mobile-wrap">
+    <div class="mbnav">
+        <div class="navbar-left">
+            <div class="mobile-toggle-wrap">
+                <a href="#" class="mobile-menu-trigger" aria-label="mobile trigger">
+                    <span class="burger-icon"><span></span><span></span><span></span></span>
+                </a>
+            </div>
+            <div class="mobile-logo-wrap is-image-logo site-branding">
+                <a href="{site_url}" title="Joy Safari Bay">
+                    <img class="logo-default" data-mode="default" height="60" width="92"
+                        src="{site_url}assets/images/logo/logo.svg" alt="Technology" decoding="async" loading="eager">
+                        
+                    <img class="logo-dark" data-mode="dark" height="60" width="92"
+                    src="{site_url}assets/images/logo/logo-white.svg" alt="Technology" decoding="async" loading="eager">
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <a href="#" class="mobile-menu-trigger mobile-search-icon" aria-label="search">
+                <span class="search-icon-svg"></span>
+            </a>
+                {_dark_module_switch}
+        </div>
+    </div>
+    <div class="mobile-qview">
+        <ul id="menu-mobile-quick-access-1" class="mobile-qview-inner">
+            <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1697">
+                <a href="{path=posts}"><span>Explore</span></a></li>
+            <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1698">
+                <a href="{path=posts/tending}"><span>Trending</span></a>
+            </li>
+            <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1699">
+                <a href="{path=posts/category/african-wildlife}"><span>Wildlife</span></a>
+            </li>
+            <li
+                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1700">
+                <a href="{path=posts/category/african-conservation}"><span>Conservation</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="mobile-collapse elementor-container">
+    <div class="mobile-collapse-holder">
+        <div class="mobile-collapse-inner">
+            <div class="mobile-search-form lementor-container">
+                <div class="header-search-form is-form-layout"> <span class="h5">Search</span>
+                    <form method="get" action="#"
+                        class="rb-search-form">
+                        <div class="search-form-inner"> <span class="search-icon"><span
+                                    class="search-icon-svg"></span></span> <span
+                                class="search-text"><input type="text" class="field"
+                                    placeholder="Search Headlines, News..." value=""
+                                    name="s" /></span> <span class="rb-search-submit"><input
+                                    type="submit" value="Search" /> <i class="rbi rbi-cright"
+                                    aria-hidden="true"></i></span></div>
+                    </form>
+                </div>
+            </div>
+
+            <nav class="mobile-menu-wrap lementor-container">
+                <ul id="mobile-menu" class="mobile-menu">
+                    <li id="menu-item-1841"
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1841">
+                        <a href="javascript:void(0);"><span>Wildlife Stories</span></a>
+                        <ul class="sub-menu">
+
+                            {exp:channel:categories category_group="2" style="linear"}
+                            <li id="menu-item-1843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1843">
+                                <a href="{path=posts}" aria-current="page"><span>{category_name}</span></a>
+                            </li>
+                            {/exp:channel:categories}
+                        </ul>
+                    </li>
+
+                    <li id="menu-item-1701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1701">
+                        <a href="javascripst:void(0);"><span>Posts type</span></a>
+                        <ul class="sub-menu">
+
+                            {exp:channel:categories category_group="10" style="linear"}
+                            <li id="menu-item-1702" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1702">
+                                <a href="{path=posts}"><span>{category_name}</span></a>
+                            </li>
+                            {/exp:channel:categories}
+                        </ul>
+                    </li>
+
+                    <li id="menu-item-1706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1706">
+                        <a href="javascript:void(0);"><span>More</span></a>
+                        <ul class="sub-menu">
+
+                            <li id="menu-item-1707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1707">
+                                <a href="{path=submit-content}"><span>Submit content</span></a>
+                            </li>
+
+                            <li id="menu-item-1708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1708">
+                                <a href="{path=donations}"><span>Donate</span></a>
+                            </li>
+
+                            <li id="menu-item-1708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1708">
+                                <a href="{path=contact-us}"><span>Contact us</span></a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="mobile-collapse-sections lementor-container">
+                <div class="mobile-login"> <span class="mobile-login-title h6">Have an existing account?</span> <a href="javascript:void(0);" class="login-toggle is-login is-btn">EXCLUSIVE</a></div>
+                
+                <div class="mobile-social-list">
+                    <span class="mobile-social-list-title h6">Follow US</span>
+                    <a class="social-link-instagram"
+                                    aria-label="Instagram" data-title="Instagram" href="{_instagram}"
+                                    target="_blank" rel="noopener nofollow"><i
+                                        class="rbi rbi-instagram"></i></a>
+
+                                <a class="social-link-facebook"
+                                    aria-label="Facebook" data-title="Facebook" href="{_facebook}"
+                                    target="_blank" rel="noopener nofollow"><i
+                                        class="rbi rbi-facebook"></i></a>
+                                
+                                <a class="social-link-twitter"
+                                    aria-label="Twitter" data-title="Twitter" href="{_twitter}"
+                                    target="_blank" rel="noopener nofollow"><i
+                                        class="rbi rbi-twitter"></i></a>
+                                        
+                                <a class="social-link-youtube"
+                                    aria-label="YouTube" data-title="YouTube" href="{_youtube}"
+                                    target="_blank" rel="noopener nofollow"><i
+                                        class="rbi rbi-youtube"></i></a>
+
+                                <a class="social-link-tiktok"
+                                    aria-label="TikTok" data-title="TikTok" href="{_tiktok}"
+                                    target="_blank" rel="noopener nofollow"><i
+                                        class="rbi rbi-tiktok"></i></a>
+                                        
+                                <a class="social-link-rss"
+                                    aria-label="Rss" data-title="Rss" href="#" target="_blank"
+                                    rel="noopener nofollow"><i class="rbi rbi-rss"></i></a>
+                </div>
+            </div>
+
+            <div class="collapse-footer">
+
+                <!-- <div class="collapse-footer-menu">
+                    <ul id="menu-footer-copyright-1" class="collapse-footer-menu-inner">
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643">
+                            <a href="#"><span>Contact</span></a></li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1644">
+                            <a href="#"><span>Blog</span></a></li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1645">
+                            <a href="#"><span>Complaint</span></a></li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1646">
+                            <a href="#"><span>Advertise</span></a></li>
+                    </ul>
+                </div> -->
+
+                <div class="collapse-copyright">© 2023 Joy Safari Bay. Designed by <a href="https://devplate.com">Devplate</a> . All Rights Reserved.</div>
+            </div>
+
+        </div>
+    </div>
+</div>

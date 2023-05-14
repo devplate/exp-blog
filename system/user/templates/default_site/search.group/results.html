@@ -1,0 +1,220 @@
+{layout=layout/wrapper-home-loading}
+
+{exp:seo_lite default_title="Search for: {exp:search:keywords}"}
+
+<div class="site-wrap">
+
+    <header class="search-header mb-60">
+        <div class="rb-container edge-padding">
+
+            <div class="search-header-inner">
+                <div class="search-header-content">
+
+                    <h1 class="search-title">Search Results for: {exp:search:keywords}</h1>
+                    <p class="search-subtitle">Showing {exp:search:total_results} results for your search</p>
+
+                </div>
+
+                <div class="search-header-form">
+                    {exp:search:simple_form
+                        channel="posts"
+                        search_in="everywhere"
+                        result_page="search/results"
+                        no_result_page="search/results"
+                    }
+                    <div role="search" class="search-form">
+                        <div class="search-form-icon"><i class="rbi rbi-search" aria-hidden="true"></i></div>
+                        <label class="search-form-input">
+                            <span class="screen-reader-text">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Search Headlines, News..." name="keywords" value="{exp:search:keywords}">
+                        </label>
+                        <div class="search-form-submit">
+                            <input type="submit" class="search-submit" value="Search">
+                        </div>
+                    </div>
+                    {/exp:search:simple_form}
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="blog-builder">
+        <div data-elementor-type="wp-post" data-elementor-id="3030" class="elementor elementor-3030">
+            
+            {exp:search:search_results
+                query="{get:keywords}"
+                channel="posts"
+                search_in="everywhere"
+                orderby="relevance"
+            }
+
+            {if no_results}
+            
+            <div class="pb-60" style="text-align: center;">
+                <h2>But you Might like these Entries</h2>
+            </div>
+
+            <section
+                class="elementor-section elementor-top-section elementor-element elementor-element-9b71d20 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="9b71d20" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ad9195"
+                    data-id="5ad9195" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-4f20c91 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                        data-id="4f20c91" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-custom">
+                            
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7f0410d"
+                            data-id="7f0410d" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-0ec45a7 elementor-widget elementor-widget-foxiz-grid-flex-2"
+                                    data-id="0ec45a7" data-element_type="widget"
+                                    data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_0ec45a7"
+                                            class="block-wrap block-grid block-grid-flex-2 rb-columns rb-col-4 rb-tcol-2 rb-mcol-2 is-gap-20 col-border is-border-gray hovering-scale ecat-text">
+                                            <div class="block-inner">
+
+            {exp:channel:entries channel="posts" orderby="random" limit="8"}
+            <div class="p-wrap p-grid p-grid-2">
+                <div class="feat-holder">
+                    <div class="p-featured">
+                        <a class="p-flink"
+                            href="{url_title_path=post}"
+                            title="What Africa Can Learn from the Asian Tigers">
+                            <img src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="{title}" decoding="async" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="p-categories p-top">
+                    {exp:query sql=" SELECT exp_categories.cat_name 
+                            FROM exp_categories 
+                            JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                            WHERE exp_categories.group_id IN ('3') 
+                            AND exp_category_posts.entry_id = '{entry_id}' 
+                            ORDER BY exp_categories.cat_name ASC"
+                            style="nested"}
+                    <span class="p-category category-id-3" rel="category">{cat_name}</span>
+                    {/exp:query}
+                </div>
+
+                <h3 class="entry-title"><a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                <div class="p-divider is-divider-bold"></div>
+                <div class="p-meta">
+                    <div class="meta-inner is-meta">
+                        <span class="meta-el meta-update">
+                            <i class="rbi rbi-time" aria-hidden="true"></i>
+                                <time class="updated">{entry_date format="%M %d, %Y"}</time>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {/exp:channel:entries}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+            {/if}
+            {/exp:search:search_results}
+
+            <section
+                class="elementor-section elementor-top-section elementor-element elementor-element-9b71d20 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="9b71d20" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ad9195"
+                    data-id="5ad9195" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-4f20c91 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                        data-id="4f20c91" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-custom">
+                            
+                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7f0410d"
+                            data-id="7f0410d" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-0ec45a7 elementor-widget elementor-widget-foxiz-grid-flex-2"
+                                    data-id="0ec45a7" data-element_type="widget"
+                                    data-widget_type="foxiz-grid-flex-2.default">
+                                    <div class="elementor-widget-container">
+                                        <div id="uid_0ec45a7" class="block-wrap pb-60 block-grid block-grid-flex-2 rb-columns rb-col-4 rb-tcol-2 rb-mcol-2 is-gap-20 col-border is-border-gray hovering-scale ecat-text">
+                                            <div class="block-inner">
+
+                                                {exp:search:search_results
+                                                    search_in="everywhere"
+                                                    orderby="relevance"
+                                                    paginate="bottom"
+                                                }
+
+                                                <div class="p-wrap p-grid p-grid-2">
+                                                    <div class="feat-holder">
+                                                        <div class="p-featured">
+                                                            <a class="p-flink"
+                                                                href="{url_title_path=post}"
+                                                                title="What Africa Can Learn from the Asian Tigers">
+                                                                <img src="{post_details}{post_details:display_image}{/post_details}" class="featured-img wp-post-image" alt="{title}" decoding="async" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="p-categories p-top">
+                                                        {exp:query sql=" SELECT exp_categories.cat_name 
+                                                                FROM exp_categories 
+                                                                JOIN exp_category_posts ON exp_categories.cat_id = exp_category_posts.cat_id 
+                                                                WHERE exp_categories.group_id IN ('3') 
+                                                                AND exp_category_posts.entry_id = '{entry_id}' 
+                                                                ORDER BY exp_categories.cat_name ASC"
+                                                                style="nested"}
+                                                        <span class="p-category category-id-3" rel="category">{cat_name}</span>
+                                                        {/exp:query}
+                                                    </div>
+
+                                                    <h3 class="entry-title"><a class="p-url" href="{url_title_path=post}" rel="bookmark">{title}</a></h3>
+                                                    <div class="p-divider is-divider-bold"></div>
+                                                    <div class="p-meta">
+                                                        <div class="meta-inner is-meta">
+                                                            <span class="meta-el meta-update">
+                                                                <i class="rbi rbi-time" aria-hidden="true"></i>
+                                                                    <time class="updated">{entry_date format="%M %d, %Y"}</time>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                {paginate}
+                                                {pagination_links}
+                                            </div>
+                                            <nav class="pagination-wrap pagination-simple clearfix">
+                                                {next_page}
+                                                <span class="newer"><a href="{pagination_url}"><i class="rbi rbi-cleft" aria-hidden="true"></i>Newer Articles</a></span>
+                                                {/next_page}
+                                                {previous_page}
+                                                <span class="older"><a href="{pagination_url}">Older Articles<i class="rbi rbi-cright" aria-hidden="true"></i></a></span>
+                                                {/previous_page}
+                                            </nav>
+                                            {/pagination_links}
+                                            {/paginate}
+                                            {/exp:search:search_results}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                   
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

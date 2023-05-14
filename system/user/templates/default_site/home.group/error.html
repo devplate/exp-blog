@@ -1,0 +1,37 @@
+{layout=layout/wrapper-home-loading}
+
+{exp:seo_lite default_title="Error 404 | Page not found"}
+
+<div class="site-wrap">
+    <div class="page404-wrap rb-container edge-padding">
+        <div class="page404-inner">
+            <div class="page404-featured">
+            </div>
+            <h1 class="page-title">Something's wrong here...</h1>
+            <p class="page404-description">It looks like nothing was found at this location. The page you were looking
+                for does not exist or was loading incorrectly.</p>
+
+                {exp:search:simple_form
+                    channel="posts"
+                    search_in="everywhere"
+                    result_page="search/results"
+                    no_result_page="search/results"
+                }
+            <div class="search-form">
+                <div class="search-form-icon"><i class="rbi rbi-search" aria-hidden="true"></i></div>
+                <label class="search-form-input">
+                    <span class="screen-reader-text">Search for:</span>
+                    <input type="search" class="search-field" placeholder="Search Headlines, News..." value="" name="keywords">
+                </label>
+                <div class="search-form-submit">
+                    <input type="submit" class="search-submit" value="Search">
+                </div>
+            </div>
+            {/exp:search:simple_form}
+
+            <div class="page404-btn-wrap">
+                <a href="{site_url}" class="page404-btn is-btn">Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+</div>

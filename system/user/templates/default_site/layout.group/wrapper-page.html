@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {_head}
+</head>
+
+<body
+    class="home page-template-default page page-id-1465 wp-embed-responsive elementor-default elementor-kit-3 elementor-page elementor-page-1465 menu-ani-1 hover-ani-1 is-rm-1 is-hd-1 is-backtop none-m-backtop is-mstick sync-bookmarks"
+    data-theme="default">
+
+    <div class="site-outer">
+        <header id="site-header" class="header-wrap rb-section header-template">
+            <div class="reading-indicator"><span id="reading-progress"></span></div>
+            {embed=layout/_header}
+        </header>
+        <div class="site-wrap">
+            <div data-elementor-type="wp-page" data-elementor-id="2820" class="elementor elementor-2820">
+                <div id="single-post-infinite" class="single-post-infinite none-mobile-sb">
+                    <div class="single-post-outer activated">
+                        {layout:contents}
+                    </div>
+                    <div id="single-infinite-point" class="single-infinite-point pagination-wrap">
+                        <i class="rb-loader" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-wrap rb-section footer-etemplate">
+            {_footer}
+        </footer>
+    </div>
+    {_js-page}
+    {if segment_1 =="post"} 
+    <script src="{site_url}assets/js/mailchimp.js"></script>
+    {/if}
+</body>
+
+</html>

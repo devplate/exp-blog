@@ -1,0 +1,128 @@
+{layout=layout/wrapper-home-loading}
+
+{exp:seo_lite default_title="Donations"}
+
+{exp:channel:entries channel="donations"}
+<section class="elementor-section elementor-top-section elementor-element elementor-element -1b92a9b elementor-section-boxed elementor-section-height-default elementor-section-height-default" >
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container bottom-border-5 prl-10-sm elementor-column-gap-no">
+        <div class="pt-40">
+            
+            <aside class="breadcrumb-wrap breadcrumb-navxt s-breadcrumb">
+                
+                <div class="breadcrumb-inner" vocab="{site_url}post/category/do-you-know" typeof="BreadcrumbList">
+                    <span property="itemListElement" typeof="ListItem">
+                        <span property="item" typeof="WebPage" class="taxonomy category"><span property="name">Enjoying what we are doing?</span></span>
+                        <meta property="position" content="4"></span>
+                </div>
+
+            </aside>
+
+            <h1 class="s-title fw-headline" itemprop="headline">{title}</h1>
+            <h2 class="s-tagline fw-tagline">Your donation will motivate our Writers to produce more quality content and cover expenses related to the blog's upkeep. Your donation also help charitable causes and fund our researches</h2>
+            <div class="single-meta yes-center">
+                <div class="smeta-in">
+                    <div class="smeta-sec">
+                        <div class="p-meta">
+                            <div class="meta-inner is-meta"><span class="meta-el meta-author">
+                                    <em class="meta-label">Donate to</em>
+                                    <a href="{site_url}">Joy Safari Bay</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="smeta-extra">
+                    <div class="t-shared-sec tooltips-n is-color">
+                        <div class="t-shared-header is-meta">
+                            <i class="rbi rbi-share" aria-hidden="true"></i><span class="share-label">Share</span>
+                        </div>
+                        <div class="effect-fadeout"> <a class="share-action share-trigger icon-facebook"
+                                href="https://www.facebook.com/sharer.php?u={site_url}post/details/{url_title}"
+                                data-title="Facebook" rel="nofollow"><i class="rbi rbi-facebook"
+                                    aria-hidden="true"></i></a>
+                            <a class="share-action share-trigger icon-twitter"
+                                href="https://twitter.com/intent/tweet?text={title}:%20Post%20via%20@joysafaribay&amp;url={site_url}post/details/{last_segment}%2F&amp;via="
+                                data-title="Twitter" rel="nofollow">
+                                <i class="rbi rbi-twitter" aria-hidden="true"></i></a> <a
+                                class="share-action icon-email"
+                                href="mailto:?subject={title}:%20&body=Read%20this%20link%20{site_url}post/details/{last_segment}"
+                                data-title="Email" rel="nofollow">
+                                <i class="rbi rbi-email" aria-hidden="true"></i></a>
+                            <a class="share-action live-tooltip icon-copy copy-trigger" href="#" data-copied="Copied!"
+                                data-link="{site_url}post/details/{last_segment}"
+                                rel="nofollow" data-copy="Copy Link"><i class="rbi rbi-link-o"
+                                    aria-hidden="true"></i></a>
+                            <a class="share-action icon-print" rel="nofollow"
+                                href="javascript:if(window.print)window.print()" data-title="Print"><i
+                                    class="rbi rbi-print" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d0cf0a9" data-element_type="section">
+    <div class="elementor-container pt-20 elementor-column-gap-no">
+        <div class="elementor-column elementor-top-column elementor-element elementor-element-ffe814a" data-id="ffe814a" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="container">
+                    <div class="s-ct">
+                        <div class="s-ct-wrap">
+                            <div class="s-ct-inner">
+                                <div class="e-ct-outer">
+
+                                    <div class="entry-content post-contents rbct clearfix is-highlight-shares"
+                                        itemprop="articleBody">
+                                        <p class="has-drop-cap">{post_content}</p>
+
+
+                                        <div class="elementor-element text-center pt-20 elementor-element-1f6589d elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="1f6589d" data-element_type="widget" data-widget_type="button.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-button-wrapper">
+                                                    <div id="paypal-button-container-P-9R727549S0904745XMRPJCLA"></div>
+                                                        <script src="https://www.paypal.com/sdk/js?client-id=AbRFKsW5i-Qv_Ep--TtTqAXsAAezX3GHGkhZ7KjQp0cPbxhi0sqInxzaZti0anGUwRDs3i64WbV-1Ep8&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                                                        <script>
+                                                        paypal.Buttons({
+                                                            style: {
+                                                                shape: 'rect',
+                                                                color: 'gold',
+                                                                layout: 'vertical',
+                                                                label: 'subscribe'
+                                                            },
+                                                            createSubscription: function(data, actions) {
+                                                                return actions.subscription.create({
+                                                                /* Creates the subscription */
+                                                                plan_id: 'P-9R727549S0904745XMRPJCLA'
+                                                                });
+                                                            },
+                                                            onApprove: function(data, actions) {
+                                                                alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                                                            }
+                                                        }).render('#paypal-button-container-P-9R727549S0904745XMRPJCLA'); // Renders the PayPal button
+                                                        </script>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{/exp:channel:entries}
